@@ -4,5 +4,4 @@ streamlit
 numpy
 copy
 matplotlib
-mpl_toolkits
 deepdish
