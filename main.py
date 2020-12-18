@@ -205,7 +205,7 @@ class utlhs():
 with st.echo(code_location='below'):  
 
     total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
-    D=3
+    D=1
 
     # Start with a 1D sample
     sampler = utlhs(N=total_points, D=D)
@@ -213,8 +213,24 @@ with st.echo(code_location='below'):
     fig, ax = sampler.plot_sample(plotD=1, grid=True)
     st.pyplot(fig)
 
+with st.echo(code_location='below'):  
+
+    total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
+    D=2
+
+    # Start with a 1D sample
+    sampler = utlhs(N=total_points, D=D)
+        
     fig, ax = sampler.plot_sample(plotD=2, grid=True)
     st.pyplot(fig)
+
+with st.echo(code_location='below'):  
+
+    total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
+    D=3
+
+    # Start with a 1D sample
+    sampler = utlhs(N=total_points, D=D)
 
     fig, ax = sampler.plot_sample(plotD=3, grid=True)
     st.pyplot(fig)
