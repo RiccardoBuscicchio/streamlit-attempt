@@ -162,7 +162,7 @@ class utlhs():
                     ax.axvline(b, c='k', lw=0.1)
         elif plotD==2:
             if axes==None: axes=(0,1)
-            fig = plt.figure(1, (3,3))
+            fig = plt.figure(2, (3,3))
             ax = fig.gca()
             ax.scatter(self.samples[:,axes[0]], self.samples[:,axes[1]], c='k', s=0.3)
             ax.set_xlabel(f"$x_{axes[0]}$")
@@ -175,7 +175,7 @@ class utlhs():
                     ax.axhline(b, c='k', lw=0.1)
         elif plotD==3:
             if axes==None: axes=(0,1,2)
-            fig = plt.figure(1, (5,5))
+            fig = plt.figure(3, (5,5))
             ax = Axes3D(fig) 
             ax.scatter(self.samples[:,axes[0]], self.samples[:,axes[1]],self.samples[:,axes[2]], c='k')
             ax.set_xlabel(f"$x_{axes[0]}$")
@@ -223,6 +223,13 @@ with st.echo(code_location='below'):
    D=2
    sampler = utlhs(N=total_points, D=D)        
    fig, ax = sampler.plot_sample(plotD=2, grid=True)
+   st.pyplot(fig)
+        
+st.subheader("3-dimensional case:")
+with st.echo(code_location='below'):  
+   D=3
+   sampler = utlhs(N=total_points, D=D)        
+   fig, ax = sampler.plot_sample(plotD=3, grid=True)
    st.pyplot(fig)
 
         
