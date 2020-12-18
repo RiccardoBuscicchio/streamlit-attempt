@@ -1,7 +1,3 @@
-from collections import namedtuple
-import altair as alt
-import math
-import pandas as pd
 import streamlit as st
 
 import numpy as np
@@ -19,8 +15,7 @@ def lhs_sample(N=10, D=2):
         lhs_centroids = np.column_stack(tuple(np.random.permutation(centroids) for i in range(D)))
         sample = lhs_centroids + np.random.uniform(low=-interval/2, high=interval/2, size=(N, D))
         return bins, lhs_centroids, sample[np.argsort(sample.T[0,:])]
-    
-    class utlhs():                    
+class utlhs():                    
     def __init__(self, N=3, D=2):
         self.N = N
         self.D = D
@@ -207,15 +202,13 @@ def lhs_sample(N=10, D=2):
         return 
 
 
-
-with st.echo(code_location='below'):
-   
+with st.echo(code_location='below'):  
 
     total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
-    D=3 = st.slider("Number of turns in spiral", 1, 100, 9)
+    D=3
 
     # Start with a 1D sample
-    sampler = utlhs(N=7, D=1)
+    sampler = utlhs(N=total_points, D=D)
 
     fig, ax = sampler.plot_sample(plotD=1, grid=True)
     plt.show()
