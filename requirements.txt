@@ -4,4 +4,3 @@ streamlit
 numpy
 matplotlib
 deepdish
-plotly
