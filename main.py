@@ -204,11 +204,11 @@ class utlhs():
 total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
 
 st.header("Latin hypercube")
-st.subheader("1-dimensional")
-st.text("Some text")
-st.markdown("Some `markdown` content :x:")
-st.latex(r'''Some \latex content, e.g. $G=c=h=1$''')
-             
+st.text("A text block")
+st.markdown("Some `markdown` content :x:, :construction:")
+st.latex(r'''$G=c=1''')
+
+st.subheader("1-dimensional case:")
 with st.echo(code_location='below'):  
     D=1
 
