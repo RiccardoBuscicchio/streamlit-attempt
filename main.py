@@ -213,6 +213,10 @@ with st.echo(code_location='below'):
     fig, ax = sampler.plot_sample(plotD=1, grid=True)
     st.pyplot(fig)
 
-#     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-#         .mark_circle(color='#0068c9', opacity=0.5)
-#         .encode(x='x:Q', y='y:Q'))
+    fig, ax = sampler.plot_sample(plotD=2, grid=True)
+    st.pyplot(fig)
+
+    fig, ax = sampler.plot_sample(plotD=3, grid=True)
+    st.pyplot(fig)
+
+        
