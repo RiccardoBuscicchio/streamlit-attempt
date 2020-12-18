@@ -201,10 +201,10 @@ class utlhs():
             setattr(self, k, file[k])
         return 
 
+total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
 
 with st.echo(code_location='below'):  
 
-    total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
     D=1
 
     # Start with a 1D sample
@@ -215,7 +215,6 @@ with st.echo(code_location='below'):
 
 with st.echo(code_location='below'):  
 
-    total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
     D=2
 
     # Start with a 1D sample
@@ -226,7 +225,6 @@ with st.echo(code_location='below'):
 
 with st.echo(code_location='below'):  
 
-    total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
     D=3
 
     # Start with a 1D sample
