@@ -206,7 +206,7 @@ total_points = st.slider("Number of cells in Hypercube 1D", 1, 100, 2)
 st.header("Latin hypercube")
 st.text("A text block")
 st.markdown("Some `markdown` content :x:, :construction:")
-st.latex(r'''$G=c=1''')
+st.latex(r'''G=c=1, ds^2=g_{\mu\nu}dx^\mudx^\nu''')
 
 st.subheader("1-dimensional case:")
 with st.echo(code_location='below'):  
@@ -218,10 +218,11 @@ with st.echo(code_location='below'):
     fig, ax = sampler.plot_sample(plotD=1, grid=True)
     st.pyplot(fig)
 
-# with st.echo(code_location='below'):  
-#    D=2
-#    sampler = utlhs(N=total_points, D=D)        
-#    fig, ax = sampler.plot_sample(plotD=2, grid=True)
-#    st.pyplot(fig)
+st.subheader("2-dimensional case:")
+with st.echo(code_location='below'):  
+   D=2
+   sampler = utlhs(N=total_points, D=D)        
+   fig, ax = sampler.plot_sample(plotD=2, grid=True)
+   st.pyplot(fig)
 
         
