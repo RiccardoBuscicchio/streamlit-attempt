@@ -145,10 +145,10 @@ class utlhs():
         assert plotD<=self.D
         if plotD==1:
             if axes==None: axes=(0,)
-            fig = plt.figure(1, (5,1))
+            fig = plt.figure(1, (10,1))
             ax = fig.gca()
             ar = np.arange(self.N) # just as an example array
-            ax.scatter(self.samples[:,axes[0]], np.zeros((self.N,)), c='k')
+            ax.scatter(self.samples[:,axes[0]], np.zeros((self.N,)), c='k', s=0.1)
             ax.set_xlabel(f"$x_0$")
             ax.set_xlim(0,1)
             ax.tick_params(axis='y',
@@ -159,10 +159,10 @@ class utlhs():
                            labelleft=False) 
             if grid:
                 for b in self.bins:
-                    ax.axvline(b, c='k')
+                    ax.axvline(b, c='k', lw=0.1)
         elif plotD==2:
             if axes==None: axes=(0,1)
-            fig = plt.figure(1, (5,5))
+            fig = plt.figure(1, (3,3))
             ax = fig.gca()
             ax.scatter(self.samples[:,axes[0]], self.samples[:,axes[1]], c='k')
             ax.set_xlabel(f"$x_{axes[0]}$")
